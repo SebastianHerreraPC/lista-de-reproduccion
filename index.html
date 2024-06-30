@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/pages/index.css" />
+    <link rel="stylesheet" href="vendor/normalize.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <div class="page">
+    <body>
+      <div class="header">
+        <img src="/images/Logo.png" alt="" class="header__logo" />
+        <p class="header__title">Lista de reproducción</p>
+      </div>
+      <div class="main">
+        <section class="cover">
+          <img src="/images/avatar.png" alt="" class="cover__image" />
+          <h1 class="cover__title">Lista de reproducción</h1>
+        </section>
+        <section class="contenta">
+          <div class="block form">
+            <h3 class="block__title">Agrega una canción</h3>
+            <div class="input">
+              <input
+                type="text"
+                placeholder="Titulo"
+                class="input__text input__text_type_song"
+              />
+              <input
+                type="text"
+                placeholder="Artista"
+                class="input__text input__text_type_artist"
+              />
+              <button class="form__submit-btn form__submit-btn_action_add">
+                Agregar
+              </button>
+            </div>
+          </div>
+          <div class="block form">
+            <h3 class="block__title">Canciones agregadas</h3>
+            <div class="no-songs">
+              <p class="no-songs__text">No hay canciones agregadas</p>
+            </div>
+            <div class="songs-container"></div>
+            <div class="form__submit">
+              <button class="form__submit-btn form__submit-btn_action_reset">
+                Borrar lista de reproducción
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="footer"></div>
+    </body>
+  </div>
+</html>

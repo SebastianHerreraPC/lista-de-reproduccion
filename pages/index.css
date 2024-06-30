@@ -1,0 +1,75 @@
+div {
+  border: 1px solid white;
+}
+.page {
+  background-color: #3d3d3d;
+  color: white;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 50%;
+}
+.header__title {
+  font-size: 20px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #6d6d6d;
+}
+.cover {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 30px auto;
+}
+.cover__image {
+  width: 180px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.cover__title {
+  font-size: 80px;
+  margin-bottom: 0;
+}
+.block__title {
+  font-size: 40px;
+}
+.input {
+  display: flex;
+  justify-content: space-evenly;
+}
+.input__text {
+  font-size: 0.8em;
+  width: 150px;
+  height: 50px;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.block__no-forms {
+  display: flex;
+}
+.no-songs {
+  height: 70px;
+  display: flex;
+}
+
+.no-songs__text {
+  margin: auto;
+  text-align: center;
+  font-size: 1.2em;
+  color: #d3d3d3;
+}
