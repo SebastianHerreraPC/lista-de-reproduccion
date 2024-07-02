@@ -1,56 +1,70 @@
-div {
-  border: 1px solid white;
-}
-.page {
-  background-color: #3d3d3d;
-  color: white;
-  padding: 20px;
+.header {
+  max-width: 468px;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  align-items: center;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-}
 .header__logo {
-  width: 50px;
-  height: 50px;
-  margin-left: 20px;
-  border-radius: 50%;
+  width: 150px;
 }
-.header__title {
-  font-size: 20px;
+
+.header__logo-sub {
+  margin-left: 10px;
+  margin-bottom: 25px;
+  font-size: 0.6em;
 }
-.main {
-  display: flex;
-  flex-direction: column;
+
+.container {
+  max-width: 468px;
   margin: auto;
-  background-color: #6d6d6d;
 }
+
 .cover {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin: 30px auto;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
+
 .cover__image {
-  width: 180px;
-  height: 180px;
+}
+.cover__img {
+  max-width: 11px;
+  min-width: 110px;
+  height: 110px;
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-  margin-right: 30px;
 }
-.cover__title {
-  font-size: 80px;
-  margin-bottom: 0;
+
+.cover__heading {
+  margin-left: 30px;
+  font-size: 2.5em;
+  line-height: 1;
 }
-.block__title {
-  font-size: 40px;
+
+.block {
+  margin-top: 60px;
+  border-radius: 3px;
 }
+
+h3 {
+  font-weight: bold;
+}
+
 .input {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
+
+.form__submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
 .input__text {
   font-size: 0.8em;
   width: 150px;
@@ -59,9 +73,20 @@ div {
   padding: 0 10px;
   box-sizing: border-box;
 }
-.block__no-forms {
-  display: flex;
+
+.input__elem_text::placeholder {
+  color: #d3d3d3;
 }
+
+.form__submit-btn {
+  font-size: 0.8em;
+  width: 150px;
+  height: 50px;
+  background-color: #ffdb4d;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 .no-songs {
   height: 70px;
   display: flex;
@@ -72,4 +97,39 @@ div {
   text-align: center;
   font-size: 1.2em;
   color: #d3d3d3;
+}
+
+.song {
+  align-items: center;
+  display: flex;
+  position: relative;
+  margin-top: 5px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  font-size: 0.8em;
+  padding: 0 10px;
+}
+
+.song__artist {
+  margin-right: 10px;
+}
+
+.song__like {
+  border: none;
+  background-size: 100%;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.song__like:hover {
+  transform: scale(1.3);
+}
+
+.song__like_active {
+  opacity: 1;
 }
