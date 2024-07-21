@@ -12,10 +12,6 @@ function addSong(artistValue, songValue) {
   songElement.querySelector(".song__title").textContent = songValue;
   songsContainer.append(songElement);
 }
-//fucion de el boton
-addButton.addEventListener("click", function () {
-  addSong(artistInput.value, titleInput.value);
-});
 
 //controlador de eventos teclado
 titleInput.addEventListener("keydown", function (evt) {
@@ -28,4 +24,33 @@ artistInput.addEventListener("keydown", function (evt) {
   if (evt.key === "Enter") {
     addSong(artistInput.value, titleInput.value);
   }
+});
+
+function keyHandler(evt) {
+  if (evt.key === "Enter") {
+    addSong(artistInput.value, titleInput.value);
+  }
+}
+
+addButton.addEventListener("click", function () {
+  addSong(artistInput.value, titleInput.value);
+});
+
+artistInput.addEventListener("keydown", keyHandler);
+titleInput.addEventListener("keydown", keyHandler);
+
+const coverHeading = document.querySelector(".cover__title");
+const playListTitles = [
+  "Música clásica de ascensor - Volumen IV",
+  "Canciones para hacer calceta",
+  "Mis canciones de gaita favoritas",
+];
+
+function getRandomElement(arr) {
+  const randomId = Math.floor(Math.random() * arr.length);
+  return arr[randomId];
+}
+
+coverHeading.addEventListener("dblclick", function () {
+  coverHeading.textContent = getRandomElement(playListTitles);
 });
