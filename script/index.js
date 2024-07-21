@@ -16,3 +16,16 @@ function addSong(artistValue, songValue) {
 addButton.addEventListener("click", function () {
   addSong(artistInput.value, titleInput.value);
 });
+
+//controlador de eventos teclado
+titleInput.addEventListener("keydown", function (evt) {
+  if (evt.key === "Enter") {
+    addSong(artistInput.value, titleInput.value);
+  }
+});
+
+artistInput.addEventListener("keydown", function (evt) {
+  if (evt.key === "Enter") {
+    addSong(artistInput.value, titleInput.value);
+  }
+});
