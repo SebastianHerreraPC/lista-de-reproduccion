@@ -18,6 +18,7 @@ titleInput.addEventListener("keydown", function (evt) {
   if (evt.key === "Enter") {
     addSong(artistInput.value, titleInput.value);
   }
+  console.log(evt.key);
 });
 
 artistInput.addEventListener("keydown", function (evt) {
@@ -54,3 +55,8 @@ function getRandomElement(arr) {
 coverHeading.addEventListener("dblclick", function () {
   coverHeading.textContent = getRandomElement(playListTitles);
 });
+
+function doubleClickHandler(event) {
+  coverHeading.textContent = getRandomElement(playListTitles);
+  coverHeading.removeEventListener("dbclick", doubleClickHandler);
+}
