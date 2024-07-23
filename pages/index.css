@@ -15,11 +15,9 @@ body {
 }
 .header__logo {
   max-width: 30px;
-  border: solid red 1px;
 }
 .header__title {
   margin: 0;
-  border: solid red 1px;
 }
 .container {
   max-width: 468px;
@@ -48,7 +46,6 @@ body {
 .songs-container {
 }
 .song {
-  border: 1px solid rebeccapurple;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
