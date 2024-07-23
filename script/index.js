@@ -36,10 +36,6 @@ function keyHandler(evt) {
   }
 }
 
-addButton.addEventListener("click", function () {
-  addSong(artistInput.value, titleInput.value);
-});
-
 artistInput.addEventListener("keydown", keyHandler);
 titleInput.addEventListener("keydown", keyHandler);
 
@@ -64,14 +60,11 @@ function doubleClickHandler(event) {
   coverHeading.removeEventListener("dbclick", doubleClickHandler);
 }
 
-// songElement.querySelector(".song__like").addEventListener("click", function (evt) {
-//     evt.target.classList.toggle("song__like_active");
-//   });
-
 songsContainer.addEventListener("click", function (evt) {
   console.log(evt);
 });
 
-addForm.addEventListener("submit", function (evt) {
+addButton.addEventListener("submit", function (evt) {
+  addSong(artistInput.value, titleInput.value);
   evt.preventDefault();
 });
