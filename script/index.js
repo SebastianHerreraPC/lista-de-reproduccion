@@ -18,7 +18,9 @@ titleInput.addEventListener("keydown", function (evt) {
   if (evt.key === "Enter") {
     addSong(artistInput.value, titleInput.value);
   }
-  console.log(evt.key);
+  if (evt.key.toLowerCase() === "e") {
+    evt.preventDefault();
+  }
 });
 
 artistInput.addEventListener("keydown", function (evt) {
@@ -60,3 +62,13 @@ function doubleClickHandler(event) {
   coverHeading.textContent = getRandomElement(playListTitles);
   coverHeading.removeEventListener("dbclick", doubleClickHandler);
 }
+
+songElement
+  .querySelector(".song__like")
+  .addEventListener("click", function (evt) {
+    evt.target.classList.toggle("song__like_active");
+  });
+
+songsContainer.addEventListener("click", function (evt) {
+  console.log(evt);
+});
