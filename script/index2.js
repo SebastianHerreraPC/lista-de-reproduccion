@@ -3,6 +3,8 @@ const addButton = document.querySelector(".input__btn_action_add");
 const artistInput = document.querySelector(".input__text_type_artist");
 const titleInput = document.querySelector(".input__text_type_title");
 const form = document.forms.add;
+const artist = form.elements.artist;
+const title = form.elements.title;
 
 function addSong(artistValue, titleValue) {
   const songTemplate = document.querySelector("#song-template").content;
