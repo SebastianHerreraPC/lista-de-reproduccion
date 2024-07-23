@@ -3,6 +3,7 @@ const songsContainer = document.querySelector(".songs-container");
 const addButton = document.querySelector(".input__btn_action_add");
 const artistInput = document.querySelector(".input__text_type_artist");
 const titleInput = document.querySelector(".input__text_type_title");
+const addForm = document.querySelector("add");
 
 //funcion de agregar
 function addSong(artistValue, songValue) {
@@ -71,5 +72,6 @@ songsContainer.addEventListener("click", function (evt) {
   console.log(evt);
 });
 
-const addForm = document.querySelector("add");
-console.log(document.forms[0]);
+addForm.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+});
