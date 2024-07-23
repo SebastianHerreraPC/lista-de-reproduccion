@@ -63,12 +63,13 @@ function doubleClickHandler(event) {
   coverHeading.removeEventListener("dbclick", doubleClickHandler);
 }
 
-songElement
-  .querySelector(".song__like")
-  .addEventListener("click", function (evt) {
-    evt.target.classList.toggle("song__like_active");
-  });
+// songElement.querySelector(".song__like").addEventListener("click", function (evt) {
+//     evt.target.classList.toggle("song__like_active");
+//   });
 
 songsContainer.addEventListener("click", function (evt) {
   console.log(evt);
 });
+
+const addForm = document.querySelector("add");
+console.log(document.forms[0]);
