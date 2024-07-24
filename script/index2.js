@@ -37,4 +37,6 @@ form.addEventListener("submit", function (evt) {
 form.addEventListener("input", function (evt) {
   const isValid = artist.value.length > 0 && title.value.length > 0;
   console.log(evt);
+
+  setSubmitButtonState(isValid);
 });
