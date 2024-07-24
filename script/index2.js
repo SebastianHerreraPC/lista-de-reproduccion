@@ -3,8 +3,6 @@ const addButton = document.querySelector(".input__btn_action_add");
 const artistInput = document.querySelector(".input__text_type_artist");
 const titleInput = document.querySelector(".input__text_type_title");
 const form = document.forms.add;
-const artist = form.elements.artist;
-const title = form.elements.title;
 
 function addSong(artistValue, titleValue) {
   const songTemplate = document.querySelector("#song-template").content;
@@ -15,8 +13,14 @@ function addSong(artistValue, titleValue) {
 }
 
 form.addEventListener("submit", function (evt) {
-  addSong(artistValue.value, titleValue.value);
+  evt.preventDefault(); // Prevenir el envío del formulario
+
+  const artistValue = artistInput.value; // Obtener los valores de los inputs
+  const titleValue = titleInput.value;
+
+  addSong(artistValue, titleValue); // Llamar a la función con los valores correctos
+  artistInput.value = ""; // Limpiar los campos del formulario
   titleInput.value = "";
-  artistInput.value = "";
-  evt.preventDefault();
 });
+
+form.addEventListener;
